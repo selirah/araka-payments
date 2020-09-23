@@ -20,5 +20,11 @@
     "baseUrl": "."
   },
   "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx", "pages/_app.tsx", "pages/_document.js"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/_app.tsx",
+    "pages/_document.tsx",
+    "pages/js/script.js"
+  ]
 }

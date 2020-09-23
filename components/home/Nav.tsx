@@ -1,0 +1,78 @@
+import React from 'react';
+
+const Nav: React.FC = () => {
+  return (
+    <header>
+      <div className="container">
+        <nav className="navbar navbar-expand-md navbar-custom shadow">
+          <div className="container">
+            <a className="navbar-brand" href="/">
+              <img src="/img/araka/logo_symbol.png" width="40" /> Araka
+            </a>
+            <button
+              className="navbar-toggler custom-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarResponsive"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarResponsive">
+              <ul className="navbar-nav ml-auto">
+                <li className="nav-item">
+                  <a href="#" className="nav-link">
+                    Merchants
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="#" className="nav-link">
+                    Pricing
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="#" className="nav-link">
+                    About
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a href="#" className="nav-link"></a>
+                </li>
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <i className="flag-icon flag-icon-gb"></i>
+                  </a>
+                  <div
+                    className="dropdown-menu animate slideIn"
+                    aria-labelledby="navbarDropdown"
+                  >
+                    <a className="dropdown-item" href="#">
+                      <i className="flag-icon flag-icon-gb"></i> English
+                    </a>
+                    <a className="dropdown-item" href="#">
+                      <i className="flag-icon flag-icon-fr"></i> Français
+                    </a>
+                  </div>
+                </li>
+                <li className="nav-item">
+                  <a href="#" className="btn btn-outline-custom">
+                    Sign in
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+  );
+};
+
+export { Nav };

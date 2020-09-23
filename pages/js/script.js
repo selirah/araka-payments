@@ -1,7 +1,7 @@
-import $ from 'jquery';
-import { Swiper } from 'swiper';
+import jQuery from 'jquery';
+import Swiper from 'swiper';
 
-$(document).ready(function () {
+jQuery(document).ready(function () {
   let swiperOptions = {
     speed: 5000,
     direction: 'horizontal',
@@ -14,13 +14,7 @@ $(document).ready(function () {
     spaceBetween: 30,
     centeredSlides: true,
   };
-  var logosForwardSwipe = new Swiper(
-    '.swiper-container.forward',
-    swiperOptions
-  );
+  new Swiper('.swiper-container.forward', swiperOptions);
   swiperOptions.autoplay['reverseDirection'] = true;
-  var logosReverseSwipe = new Swiper(
-    '.swiper-container.reverse',
-    swiperOptions
-  );
+  new Swiper('.swiper-container.reverse', swiperOptions);
 });

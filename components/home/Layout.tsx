@@ -1,19 +1,27 @@
 import React, { ReactNode } from 'react';
 import Head from 'next/head';
-import { Header, Navbar } from './Styles';
+import { Nav } from './Nav';
+import { Banner } from './Banner';
+import { Slider } from './Slider';
+import { Footer } from './Footer';
+import { Background } from './Background';
 
 type Props = {
   children?: ReactNode;
   title?: string;
 };
 
-const Layout: React.FC<Props> = ({ children, title }) => (
+const Layout: React.FC<Props> = ({ title, children }) => (
   <React.Fragment>
     <Head>
       <title>{title}</title>
     </Head>
-    <Header>ksdnsknd</Header>
-    {/* {children} */}
+    <Background />
+    <Nav />
+    <Banner />
+    <Slider />
+    {children}
+    <Footer />
   </React.Fragment>
 );
 
