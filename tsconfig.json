@@ -25,6 +25,7 @@
     "**/*.tsx",
     "pages/_app.tsx",
     "pages/_document.tsx",
-    "pages/js/script.js"
+    "pages/js/script.js",
+    "i18n.js"
   ]
 }

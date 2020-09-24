@@ -1,6 +1,13 @@
 import React from 'react';
+import { i18n, useTranslation } from '../../i18n';
 
 const Nav: React.FC = () => {
+  const { t } = useTranslation();
+
+  const changeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
+  };
+
   return (
     <header>
       <div className="container">
@@ -21,7 +28,7 @@ const Nav: React.FC = () => {
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
                   <a href="#" className="nav-link">
-                    Merchants
+                    {t('merchants')}
                   </a>
                 </li>
                 <li className="nav-item">
@@ -53,10 +60,18 @@ const Nav: React.FC = () => {
                     className="dropdown-menu animate slideIn"
                     aria-labelledby="navbarDropdown"
                   >
-                    <a className="dropdown-item" href="#">
+                    <a
+                      className="dropdown-item"
+                      href="#"
+                      onClick={() => changeLanguage('en')}
+                    >
                       <i className="flag-icon flag-icon-gb"></i> English
                     </a>
-                    <a className="dropdown-item" href="#">
+                    <a
+                      className="dropdown-item"
+                      href="#"
+                      onClick={() => changeLanguage('fr')}
+                    >
                       <i className="flag-icon flag-icon-fr"></i> Français
                     </a>
                   </div>

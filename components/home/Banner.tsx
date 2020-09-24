@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 const Banner: React.FC = () => {
   return (
@@ -19,7 +20,11 @@ const Banner: React.FC = () => {
             </p>
             <div className="btn-links banner-text">
               <button className="btn">Become a merchant</button>
-              <button className="btn">Start making payments</button>
+              <Link href="transaction/payment">
+                <a>
+                  <button className="btn">Start making payments</button>
+                </a>
+              </Link>
             </div>
           </div>
           <div className="col-sm-6"></div>
