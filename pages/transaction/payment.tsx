@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+// import dynamic from 'next/dynamic';
 import { useSelector, useDispatch } from 'react-redux';
 import { createSelector } from 'reselect';
 import { withTranslation } from '../../i18n';
@@ -24,7 +25,11 @@ const Payment: NextPage = () => {
     }
   });
 
-  return <Layout title="Araka | Making Payments" />;
+  return (
+    <React.Fragment>
+      <Layout title="Araka | Making Payments" />
+    </React.Fragment>
+  );
 };
 
 Payment.getInitialProps = async () => ({

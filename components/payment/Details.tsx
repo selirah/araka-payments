@@ -4,6 +4,8 @@ import { createSelector } from 'reselect';
 import { AppState } from 'interfaces/AppState';
 import { Category } from 'interfaces/Category';
 import { Product } from 'interfaces/Product';
+import { FormIO } from './Form';
+import { browser } from 'process';
 
 const selectFromStore = createSelector(
   (state: AppState) => state.categories,
@@ -37,7 +39,35 @@ const Details: React.FC = () => {
 
   return (
     <React.Fragment>
-      <pre>{JSON.stringify(product)}</pre>
+      <div className="row summary justify-content-center">
+        <div className="col-md-6">
+          <div className="summary-item mb-5">
+            <label htmlFor="">Payment type</label>
+            <div className="tag">
+              <i className="mbri-mobile mr-1 icon"></i>
+              {/* <img className="image" /> */}
+              {category !== undefined ? category.name : null}
+            </div>
+          </div>
+        </div>
+        <div className="col-md-6">
+          <div className="summary-item mb-5">
+            <label htmlFor="">Provider</label>
+            <div className="tag">
+              <i className="mbri-cash mr-1 icon"></i>
+              {/* <img className="image" /> */}
+              {product !== undefined ? product.name : null}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="row display-options justify-content-center">
+        <div className="col-sm-12">
+          {process.browser ? (
+            <FormIO schema={JSON.parse(product?.form)} />
+          ) : null}
+        </div>
+      </div>
     </React.Fragment>
   );
 };

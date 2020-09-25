@@ -45,6 +45,7 @@ const Providers: React.FC = () => {
             product={product}
             key={product.productId}
             updateSelectedProduct={updateSelectedProduct}
+            activeProduct={activeProduct}
           />
         ))}
       </div>

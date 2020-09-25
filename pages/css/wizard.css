@@ -1,25 +1,3 @@
-.payment-app .navbar-brand,
-.payment-app .collapse.navbar-collapse {
-  width: 20%;
-}
-
-.payment-app .bs-wizard {
-  width: 60%;
-}
-
-.close-icon {
-  height: 45px;
-  padding: 15px;
-  border: 2px solid #ffdbce;
-  border-radius: 50%;
-  text-decoration: none;
-  float: left;
-}
-
-.close-icon i {
-  font-weight: bold;
-}
-
 .payment-container {
   margin-top: 1rem;
   padding: 1rem;
@@ -133,7 +111,6 @@
   font-size: 1.7rem;
   font-weight: 100;
 }
-
 .display-name h6 {
   font-size: 1rem;
   color: #949dac5e;
@@ -184,6 +161,7 @@
 
 .option img:hover,
 .option img:focus {
+  color: #949dac;
   outline: none;
 }
 
@@ -244,6 +222,18 @@
   padding: 0.5rem;
 }
 
+.selectable-item {
+  margin: 0 auto;
+  max-width: 80%;
+  padding: 20px;
+  border: 1px solid #fff;
+  border-radius: 16.8px;
+}
+.selectable-item.selected {
+  border-color: #ffd4c4;
+  background: #faf2ef;
+}
+
 /**-- End Options --**/
 
 /** Help Button --**/
@@ -274,4 +264,59 @@
   background: #eeeeee;
   border-radius: 0;
   color: #222;
+}
+
+/**-- End Help Button --**/
+
+/**-- Form Control --**/
+
+.form-control {
+  border: 1px solid #fbd5c7;
+  height: auto;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  background-color: #eeeeee;
+}
+
+.form-group input::placeholder {
+  padding: 0;
+}
+
+.form-group input[type='text']:focus,
+.form-group input[type='text']:active {
+  background-color: #eeeeee;
+  outline: 0 none;
+  border-color: #fbbd19;
+  box-shadow: 0 0 0 0.2rem rgba(251, 189, 25, 0.25);
+}
+
+/**-- End Form Control --**/
+
+/*-- Media Queries --*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .borderless .summary span {
+    font-size: 0.6rem;
+    padding: 0.2rem;
+    text-align: left;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .borderless .summary span {
+    font-size: 0.6rem;
+    padding: 0.2rem;
+    text-align: left;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .borderless .summary span {
+    font-size: 0.6rem;
+    padding: 0.2rem;
+    text-align: left;
+  }
 }

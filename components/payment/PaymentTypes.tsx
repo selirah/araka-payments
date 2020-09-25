@@ -56,6 +56,7 @@ const PaymentTypes: React.FC<Props> = ({ categories }) => {
             category={category}
             key={category.productCategoryId}
             updateSelectedCategory={updateSelectedCategory}
+            activeCategory={activeCategory}
           />
         ))}
       </div>

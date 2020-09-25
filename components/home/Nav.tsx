@@ -1,23 +1,14 @@
 import React from 'react';
-import { i18n, useTranslation } from '../../i18n';
-import Link from 'helper/link';
-import { path } from 'helper/path';
 
 const Nav: React.FC = () => {
-  const { t } = useTranslation();
-
-  const changeLanguage = (lang: string) => {
-    i18n.changeLanguage(lang);
-  };
-
   return (
     <header>
       <div className="container">
         <nav className="navbar navbar-expand-md navbar-custom shadow">
           <div className="container">
-            <Link className="navbar-brand" to={path.home}>
+            <a className="navbar-brand" href="/">
               <img src="/img/araka/logo_symbol.png" width="40" /> Araka
-            </Link>
+            </a>
             <button
               className="navbar-toggler custom-toggler"
               type="button"
@@ -30,7 +21,7 @@ const Nav: React.FC = () => {
               <ul className="navbar-nav ml-auto">
                 <li className="nav-item">
                   <a href="#" className="nav-link">
-                    {t('merchants')}
+                    Merchants
                   </a>
                 </li>
                 <li className="nav-item">
@@ -62,18 +53,10 @@ const Nav: React.FC = () => {
                     className="dropdown-menu animate slideIn"
                     aria-labelledby="navbarDropdown"
                   >
-                    <a
-                      className="dropdown-item"
-                      href="#"
-                      onClick={() => changeLanguage('en')}
-                    >
+                    <a className="dropdown-item" href="#">
                       <i className="flag-icon flag-icon-gb"></i> English
                     </a>
-                    <a
-                      className="dropdown-item"
-                      href="#"
-                      onClick={() => changeLanguage('fr')}
-                    >
+                    <a className="dropdown-item" href="#">
                       <i className="flag-icon flag-icon-fr"></i> Français
                     </a>
                   </div>

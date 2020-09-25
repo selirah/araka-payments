@@ -115,8 +115,14 @@ const ProcessWizard: React.FC = () => {
     }
   }, [step]);
 
-  const previousStep = (): void => {
-    dispatch(decreasePaymentStep());
+  const previousStep = (position: number): void => {
+    if (position === step) {
+      return;
+    } else if (position > step) {
+      return;
+    } else if (position < step) {
+      dispatch(decreasePaymentStep());
+    }
   };
 
   return (
@@ -126,9 +132,9 @@ const ProcessWizard: React.FC = () => {
           <div className="progress-bar"></div>
         </div>
         <a
-          href="#"
           className="bs-wizard-dot"
-          onClick={() => previousStep()}
+          onClick={() => previousStep(1)}
+          style={{ cursor: 'pointer' }}
         ></a>
         <div className="bs-wizard-info text-center">Payment Type</div>
       </div>
@@ -137,9 +143,9 @@ const ProcessWizard: React.FC = () => {
           <div className="progress-bar"></div>
         </div>
         <a
-          href="#"
           className="bs-wizard-dot"
-          onClick={() => previousStep()}
+          onClick={() => previousStep(2)}
+          style={{ cursor: 'pointer' }}
         ></a>
         <div className="bs-wizard-info text-center">Provider</div>
       </div>
@@ -148,9 +154,9 @@ const ProcessWizard: React.FC = () => {
           <div className="progress-bar"></div>
         </div>
         <a
-          href="#"
           className="bs-wizard-dot"
-          onClick={() => previousStep()}
+          onClick={() => previousStep(3)}
+          style={{ cursor: 'pointer' }}
         ></a>
         <div className="bs-wizard-info text-center">Details</div>
       </div>
@@ -159,9 +165,9 @@ const ProcessWizard: React.FC = () => {
           <div className="progress-bar"></div>
         </div>
         <a
-          href="#"
           className="bs-wizard-dot"
-          onClick={() => previousStep()}
+          onClick={() => previousStep(4)}
+          style={{ cursor: 'pointer' }}
         ></a>
         <div className="bs-wizard-info text-center">Summary</div>
       </div>
@@ -170,9 +176,9 @@ const ProcessWizard: React.FC = () => {
           <div className="progress-bar"></div>
         </div>
         <a
-          href="#"
           className="bs-wizard-dot"
-          onClick={() => previousStep()}
+          onClick={() => previousStep(5)}
+          style={{ cursor: 'pointer' }}
         ></a>
         <div className="bs-wizard-info text-center">Pay</div>
       </div>

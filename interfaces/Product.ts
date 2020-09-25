@@ -4,6 +4,6 @@ export type Product = {
   createdWhen: string;
   productCategoryId: number;
   image?: string;
-  form: string;
+  form: any;
   guid: string;
 };

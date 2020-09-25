@@ -1,28 +1,28 @@
-import React from 'react';
-import { HeadTag } from '../common/HeadTag';
+import React, { ReactNode } from 'react';
+import Head from 'next/head';
 import { Nav } from './Nav';
-import { Background } from './Background';
 import { Banner } from './Banner';
 import { Slider } from './Slider';
-import { Description } from './Description';
-import { Card } from './Card';
 import { Footer } from './Footer';
+import { Background } from './Background';
 
 type Props = {
-  title: string;
+  children?: ReactNode;
+  title?: string;
 };
 
-const Layout: React.FC<Props> = ({ title }) => (
-  <section data-spy="scroll" data-target="#navbarResponsive">
-    <HeadTag title={title} />
+const Layout: React.FC<Props> = ({ title, children }) => (
+  <React.Fragment>
+    <Head>
+      <title>{title}</title>
+    </Head>
     <Background />
     <Nav />
     <Banner />
     <Slider />
-    <Description />
-    <Card />
+    {children}
     <Footer />
-  </section>
+  </React.Fragment>
 );
 
-export { Layout };
+export default Layout;
