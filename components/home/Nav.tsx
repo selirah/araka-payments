@@ -1,5 +1,7 @@
 import React from 'react';
 import { i18n, useTranslation } from '../../i18n';
+import Link from 'helper/link';
+import { path } from 'helper/path';
 
 const Nav: React.FC = () => {
   const { t } = useTranslation();
@@ -13,9 +15,9 @@ const Nav: React.FC = () => {
       <div className="container">
         <nav className="navbar navbar-expand-md navbar-custom shadow">
           <div className="container">
-            <a className="navbar-brand" href="/">
+            <Link className="navbar-brand" to={path.home}>
               <img src="/img/araka/logo_symbol.png" width="40" /> Araka
-            </a>
+            </Link>
             <button
               className="navbar-toggler custom-toggler"
               type="button"

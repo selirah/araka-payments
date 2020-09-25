@@ -1,5 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
+import Link from 'helper/link';
+import { path } from 'helper/path';
 
 const Banner: React.FC = () => {
   return (
@@ -20,10 +21,8 @@ const Banner: React.FC = () => {
             </p>
             <div className="btn-links banner-text">
               <button className="btn">Become a merchant</button>
-              <Link href="transaction/payment">
-                <a>
-                  <button className="btn">Start making payments</button>
-                </a>
+              <Link to={path.payment}>
+                <button className="btn">Start making payments</button>
               </Link>
             </div>
           </div>

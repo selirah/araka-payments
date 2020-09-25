@@ -3,7 +3,7 @@ export type Product = {
   name: string;
   createdWhen: string;
   productCategoryId: number;
-  image: string;
+  image?: string;
   form: string;
   guid: string;
 };

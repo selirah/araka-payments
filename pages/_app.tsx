@@ -9,6 +9,7 @@ if (typeof window !== 'undefined') {
   require('swiper/swiper-bundle.min.css');
   require('./css/mobiriseicons.css');
   require('./css/style.css');
+  require('./css/wizard.css');
   // require('antd/dist/antd.css');
   require('jquery');
   require('bootstrap/dist/js/bootstrap.bundle.min');

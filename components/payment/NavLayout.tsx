@@ -1,14 +1,16 @@
 import React from 'react';
 import { ProcessWizard } from './ProcessWizard';
+import Link from 'helper/link';
+import { path } from 'helper/path';
 
 const NavLayout: React.FC = () => {
   return (
     <header>
       <div className="container-fluid p-0">
         <nav className="navbar navbar-expand-md navbar-custom shadow">
-          <a className="navbar-brand" href="/transaction/payment">
+          <Link className="navbar-brand" to={path.home}>
             <img src="/img/araka/logo_symbol.png" width="40" /> Araka
-          </a>
+          </Link>
           <ProcessWizard />
           <button
             className="navbar-toggler custom-toggler"
